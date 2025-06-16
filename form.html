@@ -1,0 +1,1405 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+
+        <meta charset="UTF-8">
+        <title>GS Subscription Document</title>
+
+        <style>
+            /* -------- Intro (cover) section -------- */
+            .banner-img{width:100%;max-width:100%;height:auto;margin-bottom:24px;}
+            .intro-title{font-size:1.4em;font-weight:bold;margin:4px 0;}
+            .intro-sub{font-size:1.15em;margin:2px 0 16px 0;}
+            ul.intro-list{margin-left:20px;}
+            /* -------- Sections 1 – 2 -------- */
+            body{font-family:Arial,Helvetica,sans-serif;margin:40px;color:#000;}
+            h1,h2{margin-bottom:4px;}
+            .section{border:1px solid #000;padding:16px;margin-bottom:24px;}
+            .section legend{font-weight:bold;}
+            label{display:inline-block;margin-right:12px;margin-bottom:6px;}
+            table{border-collapse:collapse;width:100%;}
+            th,td{border:1px solid #000;padding:6px;vertical-align:top;}
+            .subnote{font-size:0.9em;color:#333;}
+            /* -------- Section 3 (Investor Info) -------- */
+            .grid-two{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+            .label-block{display:block;margin-bottom:6px;}
+            .full-width{width:100%;}
+            .note{font-size:.9em;font-style:italic;color:#333;margin-top:8px;}
+            /* -------- Sections 4 – 5 -------- */
+            .checkbox-block{display:block;margin-bottom:6px;}
+            .grid-three{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;}
+            /* -------- Section 6 -------- */
+            .subheader{font-weight:bold;margin-top:16px;}
+            /* -------- Section 7 -------- */
+            .bank-table{border-collapse:collapse;width:100%;}
+            .bank-table td{border:1px solid #000;padding:6px;}
+            /* -------- Section 8 -------- */
+            .beneficiary-table{border-collapse:collapse;width:100%;}
+            .beneficiary-table th,.beneficiary-table td{border:1px solid #000;padding:6px;text-align:left;}
+            .percent-field{width:80px;}
+            /* -------- Section 9 -------- */
+            ul.reps{margin-left:20px;}  /* simple indent for bullet list */
+            /* -------- Section 10 -------- */
+            .sig-table{width:100%;margin-bottom:12px;}
+            .sig-table td{padding:6px 4px;vertical-align:bottom;}
+            .sig-field{width:100%;border:none;border-bottom:1px solid #000;}
+            /* -------- Section 12 -------- */
+            .payment-table{border-collapse:collapse;width:100%;}
+            .payment-table td{padding:4px 6px;vertical-align:top;border:none;}
+            .payment-table td:first-child{font-weight:bold;width:190px;}
+            /* ===================== PRINT LAYER ===================== */
+            @media print {
+              /* --- page box --- */
+              @page {
+                size: A4 portrait;
+                margin: 12mm 15mm;
+                counter-increment: page;
+              }
+              /* --- global tweaks --- */
+              body{
+                font-family:'Proxima Nova','Arial',sans-serif;
+                -webkit-print-color-adjust:exact;
+                        print-color-adjust:exact;
+              }
+              /* --- fixed header / footer drawn once per page --- */
+              .print-banner{
+                position:fixed; top:0; left:0; right:0;
+                height:60px;
+                background:#11715f url('header-placeholder.png') center/contain no-repeat;
+              }
+              .print-footer{
+                position:fixed; bottom:0; left:0; right:0;
+                height:22px;
+                text-align:center;
+                font-size:0.75rem;
+                line-height:22px;
+                color:#415e6d;
+              }
+              .print-footer:after{
+                content:"Greenwood Star Income & Growth Trust — Subscription Agreement  |  Page " counter(page);
+              }
+              /* --- section blocks --- */
+              fieldset.section{
+                border:1px solid #004b28;
+                padding:14px; margin-bottom:18px;
+                break-inside:avoid; page-break-inside:avoid;
+              }
+              fieldset.section legend{
+                color:#004b28;
+                font-weight:600;
+                font-size:1.05rem;
+              }
+              /* --- headings --- */
+              h1,h2{color:#11715f;font-family:'Neulis Sans','Arial',sans-serif;}
+              /* --- tables & lines --- */
+              table,th,td{border-color:#415e6d;}
+              /* --- hide on paper --- */
+              .printBtn, button:not(.force-print){display:none !important;}
+            }
+            /* ======================================================= */
+        </style>
+
+    </head>
+
+    <body>
+
+    <!-- Intro / Cover -->
+    <section id="intro">
+
+      <!-- Colored banner graphic -->
+      <img src="Greenwood-Star-Logo-RGB.png" alt="Greenwood Star cover banner" class="banner-img">
+
+      <p class="intro-title">FORM OF SUBSCRIPTION AGREEMENT</p>
+      <p class="intro-title">GREENWOOD STAR INCOME AND GROWTH TRUST, INC.</p>
+      <p class="intro-sub">A160v1.3</p>
+      <strong class="intro-sub">Instructions to Investors</strong>
+
+      <p>
+        Please read carefully the confidential private placement memorandum of
+        Greenwood star income and growth trust, inc. (the “fund”), dated , and all
+        Appendices thereto (as supplemented or amended from time to time, the
+        “memorandum”), before deciding to subscribe for shares of the fund’s common stock
+        (“shares”). The offering described in the memorandum (the “offering”) is limited to
+        Investors who qualify as “accredited investors” as defined in rule 501 of
+        Regulation d under the securities act of 1933, as amended (the “securities act”).
+      </p>
+
+      <p>
+        Each prospective investor should examine the suitability of an investment in shares in
+        The context of his, her or its own needs, investment objectives, and financial
+        Capabilities and should make his, her or its own independent investigation of the
+        Company and its external manager(“manager”), in making a decision as to the
+        Suitability of the investment. Each prospective investor is also encouraged to consult
+        With his, her or its business or tax advisor regarding the risks and merits of an
+        Investment in shares. Any capitalized terms used and not otherwise defined herein
+        Shall have the meanings given to such terms in the memorandum.
+      </p>
+
+      <p>
+        Important note: failure to complete all applicable information and deliver any
+        Additional information requested by the company will result in these documents
+        Being returned for completion and may cause a rejection or delay of acceptance of
+        The subscription.
+      </p>
+
+    </section>
+
+    <form>
+
+    <!-- Section 1 -->
+    <fieldset class="section">
+
+    <legend>1. INVESTMENT</legend>
+
+    <p><strong>Investment Amount:</strong>
+        $ <input type="number" name="investment_amount" style="width:160px;" min="0" step="0.01">
+    </p>
+
+    <p>
+        <label><input type="radio" name="investment_type" value="initial"> Initial Investment ($100,000 minimum)</label>
+        <label><input type="radio" name="investment_type" value="additional"> Additional Investment</label>
+    </p>
+
+    <p><strong>Method of Payment (please check one)</strong></p>
+    <p>
+        <label><input type="radio" name="payment_method" value="mail"> By Mail*</label>
+        <label><input type="radio" name="payment_method" value="wire"> By Wire</label>
+    </p>
+
+    <p class="subnote">
+        By Mail: See Section 12 for payment instructions.<br>
+        Checks payable to “GREENWOOD STAR INCOME AND GROWTH TRUST, INC.”<br>
+        <em>* Cash, cashier’s checks/official bank checks, temporary checks, foreign checks, 
+        money orders, third-party checks, or travelers’ checks are not accepted.</em>
+        <br><br>
+        By Wire: See Section 12 for wire payment instructions.
+    </p>
+
+    </fieldset>
+
+    <!-- Section 2 -->
+    <fieldset class="section">
+
+    <legend>2. FORM OF OWNERSHIP <span style="font-weight:normal;">(*Check all applicable boxes)</span></legend>
+
+    <table>
+    <thead>
+      <tr><th style="width:50%;">Account Type</th><th>Additional Required Documentation</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+            <label><input type="checkbox" name="acct_type_individual"> Individual</label><br>
+            <label><input type="checkbox" name="acct_type_individual_tod"> TOD</label>
+        </td>
+        <td>Copy of ID; If TOD, complete Section 8 (Transfer on Death Designation)</td>
+      </tr>
+      <tr>
+        <td>
+            <label><input type="checkbox" name="acct_type_joint_wros"> Joint Tenants WROS</label><br>
+            <label><input type="checkbox" name="acct_type_joint_tic"> Tenants in Common</label><br>
+            <label><input type="checkbox" name="acct_type_joint_tod"> TOD</label><br>
+            <label><input type="checkbox" name="acct_type_comm_prop"> Community Property</label>
+        </td>
+        <td>Copy of ID; If TOD, complete Section 8 (Transfer on Death Designation)</td>
+      </tr>
+      <tr>
+        <td><label><input type="checkbox" name="acct_type_trust"> Trust</label></td>
+        <td>Trustee certification form or trust documents, copy of ID for trustee(s)</td>
+      </tr>
+      <tr>
+        <td><label><input type="checkbox" name="acct_type_estate"> Estate</label></td>
+        <td>Documents evidencing individuals authorized to act on behalf of estate</td>
+      </tr>
+      <tr>
+        <td>
+            Custodial<br>
+            <label><input type="checkbox" name="acct_type_ugma"> UGMA: State of <input type="text" name="ugma_state" style="width:60px;"></label><br>
+            <label><input type="checkbox" name="acct_type_utma"> UTMA: State of <input type="text" name="utma_state" style="width:60px;"></label>
+        </td>
+        <td>None</td>
+      </tr>
+      <tr>
+        <td>
+            Corporation<br>
+            <label><input type="checkbox" name="acct_type_c_corp"> C Corp</label><br>
+            <label><input type="checkbox" name="acct_type_s_corp"> S Corp</label>
+        </td>
+        <td>Articles of incorporation or corporate resolution, certificate of formation, certificate of good standing</td>
+      </tr>
+      <tr>
+        <td><label><input type="checkbox" name="acct_type_llc"> LLC</label></td>
+        <td>LLC operating agreement or LLC resolution, certificate of formation, certificate of good standing</td>
+      </tr>
+      <tr>
+        <td><label><input type="checkbox" name="acct_type_partnership"> Partnership</label></td>
+        <td>Limited partnership agreement, certificate of formation, certificate of good standing</td>
+      </tr>
+      <tr>
+        <td><label><input type="checkbox" name="acct_type_nonprofit"> Non-Profit Organization</label></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>
+            <label><input type="checkbox" name="acct_type_profit_sharing"> Profit Sharing Plan</label><br>
+            <label><input type="checkbox" name="acct_type_defined_benefit"> Defined Benefit Plan</label><br>
+            <label><input type="checkbox" name="acct_type_keogh"> KEOGH Plan</label>
+        </td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>
+            IRAs<br>
+            <label><input type="checkbox" name="acct_type_trad_ira"> Traditional IRA</label>
+            <label><input type="checkbox" name="acct_type_sep_ira"> SEP IRA</label>
+            <label><input type="checkbox" name="acct_type_roth_ira"> ROTH IRA</label>
+            <label><input type="checkbox" name="acct_type_simple_ira"> Simple IRA</label><br>
+            <label><input type="checkbox" name="acct_type_inherited_ira"> Inherited/Beneficial IRA</label><br>
+        </td>
+        <td>
+            For inherited IRA indicate decedent’s name: <input type="text" name="decedent_name" style="width:220px;">
+        </td>
+      </tr>
+      <tr>
+        <td><input type="checkbox" name="other">Other (Specify): <input type="text" name="acct_type_other" style="width:60%;"></td>
+        <td></td>
+      </tr>
+    </tbody>
+    </table>
+
+    </fieldset>
+
+    <!-- Section 3 -->
+    <fieldset class="section" id="section3">
+
+      <legend>3. INVESTOR’S INFORMATION</legend>
+
+      <!-- Primary Owner -->
+      <h3>Primary Owner</h3>
+      <div class="grid-two">
+        <div>
+          <label class="label-block">Title
+            <select name="primary_title">
+              <option>Mr.</option><option>Mrs.</option><option>Ms.</option>
+              <option>M.D.</option><option>Ph.D.</option><option>D.D.S.</option>
+            </select>
+          </label>
+          <label class="label-block">Name
+            <input type="text" name="primary_name" class="full-width">
+          </label>
+          <label class="label-block">SSN / TIN
+            <input type="text" name="primary_ssn" class="full-width">
+          </label>
+          <label class="label-block">Date of Birth
+            <input type="date" name="primary_dob">
+          </label>
+          <label class="label-block">Primary Telephone
+            <input type="tel" name="primary_phone" class="full-width">
+          </label>
+          <label class="label-block">Secondary Telephone
+            <input type="tel" name="primary_phone2" class="full-width">
+          </label>
+          <label class="label-block">Email
+            <input type="email" name="primary_email" class="full-width">
+          </label>
+        </div>
+
+        <div>
+          <label class="label-block">Residence Address
+            <input type="text" name="primary_address" class="full-width">
+          </label>
+          <div class="grid-two">
+            <label class="label-block">City
+              <input type="text" name="primary_city" class="full-width">
+            </label>
+            <label class="label-block">State
+              <input type="text" name="primary_state" class="full-width">
+            </label>
+            <label class="label-block">ZIP Code
+              <input type="text" name="primary_zip" class="full-width">
+            </label>
+          </div>
+        </div>
+      </div>
+
+      <!-- Joint Owner -->
+      <h3>Joint Owner</h3>
+      <div class="grid-two">
+        <div>
+          <label class="label-block">Title
+            <select name="joint_title">
+              <option>Mr.</option><option>Mrs.</option><option>Ms.</option>
+              <option>M.D.</option><option>Ph.D.</option><option>D.D.S.</option>
+            </select>
+          </label>
+          <label class="label-block">Name
+            <input type="text" name="joint_name" class="full-width">
+          </label>
+          <label class="label-block">SSN / TIN
+            <input type="text" name="joint_ssn" class="full-width">
+          </label>
+          <label class="label-block">Date of Birth
+            <input type="date" name="joint_dob">
+          </label>
+          <label class="label-block">Primary Telephone
+            <input type="tel" name="joint_phone" class="full-width">
+          </label>
+          <label class="label-block">Secondary Telephone
+            <input type="tel" name="joint_phone2" class="full-width">
+          </label>
+          <label class="label-block">Email
+            <input type="email" name="joint_email" class="full-width">
+          </label>
+        </div>
+
+        <div>
+          <label class="label-block">Residence Address
+            <input type="text" name="joint_address" class="full-width">
+          </label>
+          <div class="grid-two">
+            <label class="label-block">City
+              <input type="text" name="joint_city" class="full-width">
+            </label>
+            <label class="label-block">State
+              <input type="text" name="joint_state" class="full-width">
+            </label>
+            <label class="label-block">ZIP Code
+              <input type="text" name="joint_zip" class="full-width">
+            </label>
+          </div>
+        </div>
+      </div>
+
+      <p class="note">
+        IMPORTANT: Electronic reports will be accessible via our website at 
+        <a href="https://www.greenwoodstarinvestments.com">www.greenwoodstarinvestments.com</a>. 
+        If you are not enrolling in electronic reporting only, reports will be mailed to the address provided in Section 3.
+      </p>
+
+      <!-- Entity -->
+      <h3>Entity</h3>
+      <label class="label-block">Entity Name
+        <input type="text" name="entity_name" class="full-width">
+      </label>
+      <div class="grid-two">
+        <label class="label-block">Tax Identification Number
+          <input type="text" name="entity_tin" class="full-width">
+        </label>
+        <label class="label-block">State Date of Formation
+          <input type="text" name="entity_state_date" class="full-width">
+        </label>
+      </div>
+      <label class="label-block">Address
+        <input type="text" name="entity_address" class="full-width">
+      </label>
+      <div class="grid-two">
+        <label class="label-block">City
+          <input type="text" name="entity_city" class="full-width">
+        </label>
+        <label class="label-block">State
+          <input type="text" name="entity_state" class="full-width">
+        </label>
+        <label class="label-block">ZIP Code
+          <input type="text" name="entity_zip" class="full-width">
+        </label>
+      </div>
+      <div class="grid-two">
+        <label class="label-block">Name of Entity Authorized Representative
+          <input type="text" name="entity_rep_name" class="full-width">
+        </label>
+        <label class="label-block">Title of Entity Authorized Representative
+          <input type="text" name="entity_rep_title" class="full-width">
+        </label>
+      </div>
+      <div class="grid-two">
+        <label class="label-block">Primary Telephone
+          <input type="tel" name="entity_phone" class="full-width">
+        </label>
+        <label class="label-block">Secondary Telephone
+          <input type="tel" name="entity_phone2" class="full-width">
+        </label>
+      </div>
+      <label class="label-block">Email
+        <input type="email" name="entity_email" class="full-width">
+      </label>
+
+    </fieldset>
+
+    <!-- Section 4 -->
+    <fieldset class="section" id="section4">
+
+      <legend>4. REGULATORY MATTERS</legend>
+      <p>*Check all applicable boxes. Note that additional information may be requested.</p>
+
+      <label class="checkbox-block">
+        <input type="checkbox" name="reg_finra">
+        Investor is associated with a Financial Industry Regulatory Authority, Inc. (“FINRA”) member firm.
+      </label>
+
+      <label class="checkbox-block">
+        <input type="checkbox" name="reg_erisa">
+        Investor is a plan subject to the Employee Retirement Income Security Act of 1974 (“ERISA”).
+      </label>
+
+      <label class="checkbox-block">
+        <input type="checkbox" name="reg_tax_exempt">
+        Investor is an entity that is tax-exempt for U.S. federal income tax purposes.
+      </label>
+
+    </fieldset>
+
+    <!-- Section 5 -->
+    <fieldset class="section" id="section5">
+
+      <legend>5. IRA, ROTH, OR OTHER RETIREMENT OR PROFIT-SHARING PLAN</legend>
+      <p>*If investing through an IRA or other retirement or profit-sharing plan, 
+      please complete the following (in addition to the investor information above).</p>
+
+      <label class="label-block">Custodial Account Name
+        <input type="text" name="ira_custodial_name" class="full-width">
+      </label>
+
+      <div class="grid-two">
+        <label class="label-block">Custodian Account Number
+          <input type="text" name="ira_custodian_acct" class="full-width">
+        </label>
+        <label class="label-block">Custodian’s EIN
+          <input type="text" name="ira_custodian_ein" class="full-width">
+        </label>
+      </div>
+
+      <label class="label-block">Custodian’s Address
+        <input type="text" name="ira_custodian_address" class="full-width">
+      </label>
+
+      <div class="grid-three">
+        <label class="label-block">City
+          <input type="text" name="ira_custodian_city" class="full-width">
+        </label>
+        <label class="label-block">State
+          <input type="text" name="ira_custodian_state" class="full-width">
+        </label>
+        <label class="label-block">ZIP Code
+          <input type="text" name="ira_custodian_zip" class="full-width">
+        </label>
+      </div>
+
+      <label class="label-block">Custodian’s Telephone
+        <input type="tel" name="ira_custodian_phone" class="full-width">
+      </label>
+    </fieldset>
+
+    <!-- Section 6 -->
+    <fieldset class="section" id="section6">
+
+      <legend>6. ACCREDITED INVESTOR CERTIFICATION</legend>
+
+      <!-- Individual Investors -->
+      <p><strong>FOR INDIVIDUAL INVESTORS.</strong> 
+        I represent and warrant that I am an “accredited investor” 
+        as defined by Rule 501(a) of the Securities Act because, 
+        as indicated below, I satisfy one or more of the following standards. 
+        (Check All Applicable Boxes)</p>
+
+      <label class="checkbox-block">
+        <input type="checkbox" name="indiv_net_worth">
+        I have an individual net worth, or joint net worth with my spouse or spousal equivalent, which exceeds $1,000,000. 
+        (For these purposes, “net worth” means, subject to the exception provided in the following sentence, the excess of total 
+        assets at fair market value over total liabilities. When determining net worth, however, the value of an investor’s primary 
+        residence and any indebtedness secured thereby up to its fair market value shall be excluded from the investor’s net worth, 
+        while indebtedness secured by the residence in excess of its fair market value should be considered a liability and deducted 
+        from the investor’s net worth.)
+      </label>
+      <br>
+      <label class="checkbox-block">
+        <input type="checkbox" name="indiv_income_single">
+        I had individual income (exclusive of any income attributable to my spouse or spousal equivalent) of more than 
+        $200,000 in each of the two most recent years and have a reasonable expectation to have individual income in excess of 
+        $200,000 in the current year. (For these purposes, “individual income” means the investor’s adjusted gross income, as 
+        reported for federal income tax purposes, less any income attributable to a spouse or spousal equivalent or to property owned 
+        by a spouse or spousal equivalent.)
+      </label>
+      <br>
+      <label class="checkbox-block">
+        <input type="checkbox" name="indiv_income_joint">
+        I had joint income with my spouse or spousal equivalent of more than $300,000 in each of the two most recent years 
+        and have a reasonable expectation to have joint income with my spouse or spousal equivalent in excess of $300,000 in the current year.
+      </label>
+      <br>
+      <label class="checkbox-block">
+        <input type="checkbox" name="indiv_director">
+        I am a director or executive officer of the Fund.
+      </label>
+
+      <label class="checkbox-block">
+        <input type="checkbox" name="indiv_finra_license">
+        I hold one or more of the following FINRA licenses in good standing: Series 7, Series 82, or Series 65.
+      </label>
+
+      <label class="checkbox-block">
+        <input type="checkbox" name="indiv_other">
+        Other (specify): <input type="text" name="indiv_other_spec" class="full-width">
+      </label>
+
+      <!-- Entity Investors -->
+      <p><strong>FOR ENTITY INVESTORS.</strong> I am completing this Investor Questionnaire on behalf of a legal entity, and I represent and 
+        warrant that such entity is an “accredited investor” as defined by Rule 501(a) of the Securities Act because, as indicated 
+        below, it satisfies one or more of the following standards. (Check All Applicable Boxes)</p>
+
+      <label class="checkbox-block">
+        <input type="checkbox" name="entity_trust_5mm">
+        The entity is a trust, with total assets in excess of $5,000,000, that was not formed for the specific purpose of 
+        acquiring the Shares and which has its investments directed by a person who has such knowledge and experience in financial 
+        and business matters that he or she is capable of evaluating the merits and risks of purchasing the Shares.
+      </label>
+      <br>
+      <label class="checkbox-block">
+        <input type="checkbox" name="entity_trust_5mm">
+        The entity is a bank, as defined in Section 3(a)(2) of the Securities Act, or a savings and loan association or other 
+        institution, as defined in Section 3(a)(5)(A) of the Securities Act, whether acting in its individual or fiduciary capacity.
+      </label>
+      <br>
+      <label class="checkbox-block">
+        <input type="checkbox" name="entity_trust_5mm">
+        The entity is a broker or dealer registered pursuant to Section 15 of the Securities Exchange Act of 1934, as amended.
+      </label>
+      <br>
+      <label class="checkbox-block">
+        <input type="checkbox" name="entity_trust_5mm">
+        The entity is an investment advisor either (a) registered pursuant to Section 203 of the Investment Advisors Act of 
+        1940, as amended, or registered pursuant to the laws of a state; or (b) relying on the exemption from registering with the 
+        Securities and Exchange Commission under Section 203(l) or (m) of the Investment Advisors Act of 1940, as amended.
+      </label>
+      <br>
+      <label class="checkbox-block">
+        <input type="checkbox" name="entity_trust_5mm">
+        The entity is an insurance company, as defined in Section 2(a)(13) of the Securities Act.
+      </label>
+      <br>
+      <label class="checkbox-block">
+        <input type="checkbox" name="entity_trust_5mm">
+        The entity is an investment company registered under the Investment Company Act of 1940, as amended, or a 
+        business development company, as defined in Section 2(a)(48) of that act.
+      </label>
+      <br>
+      <label class="checkbox-block">
+        <input type="checkbox" name="entity_trust_5mm">
+        The entity is Small Business Investment Company licensed by the U.S. Small Business Administration under 
+        Section 301(c) or (d) of the Small Business Investment Act of 1958.
+      </label>
+      <br>
+      <label class="checkbox-block">
+        <input type="checkbox" name="entity_trust_5mm">
+        The entity is a Rural Business Investment Company as defined in section 384A of the Consolidated Farm and Rural Development Act.
+      </label>
+      <br>
+      <label class="checkbox-block">
+        <input type="checkbox" name="entity_trust_5mm">
+        The entity is a plan established and maintained by a U.S. state, its political subdivisions, or any agency or 
+        instrumentality of such a state or its political subdivisions, for the benefit of its employees, which has total assets in excess of $5,000,000.
+      </label>
+      <br>
+      <label class="checkbox-block">
+        <input type="checkbox" name="entity_trust_5mm">
+        The entity is an employee benefit plan within the meaning of ERISA and: (i) the investment decision with respect 
+        to the Shares is being made by a plan fiduciary, as defined in Section 3(21) of ERISA, of the employee benefit plan that is 
+        either a bank, savings and loan association, insurance company or registered investment advisor; (ii) the employee benefit 
+        plan has total assets in excess of $5,000,000; or (iii) if the plan is a self-directed plan, the plan’s investment decisions are 
+        made solely by persons that qualify as “accredited investors.”
+      </label>
+      <br>
+      <label class="checkbox-block">
+        <input type="checkbox" name="entity_trust_5mm">
+        The entity is a private business development company, as defined in Section 202(a)(22) of the Investment Advisors Act of 1940, as amended.
+      </label>
+      <br>
+      <label class="checkbox-block">
+        <input type="checkbox" name="entity_trust_5mm">
+        The entity is an organization described in Section 501(c)(3) of the Internal Revenue Code, corporation, 
+        Massachusetts or similar business trust, partnership, or limited liability company, with total assets in excess of $5,000,000 
+        that was not formed for the specific purpose of acquiring the Shares.
+      </label>
+      <br>
+      <label class="checkbox-block">
+        <input type="checkbox" name="entity_trust_5mm">
+        All of the equity owners of the entity are “accredited investors.”
+      </label>
+      <br>
+      <label class="checkbox-block">
+        <input type="checkbox" name="entity_trust_5mm">
+        The entity is a grantor trust, and each grantor of the trust (i) has the power to revoke the trust and regain title to the 
+        trust assets and (ii) is an accredited investor as described in one or more of the categories set forth in items herein.
+      </label>
+      <br>
+      <label class="checkbox-block">
+        <input type="checkbox" name="entity_trust_5mm">
+        The entity is of a type not listed above, not formed for the specific purpose of 
+        acquiring the Shares, owning investments in excess of $5,000,000.
+      </label>
+      <br>
+      <label class="checkbox-block">
+        <input type="checkbox" name="entity_trust_5mm">
+        The entity is a “family office,” as defined in Rule 202(a)(11)(G)-1 under the Investment Advisors Act of 1940 (17 
+        CFR 275.202(a)(11)(G)-1): (i) with assets under management in excess of $5,000,000; (ii) that is not formed for the specific 
+        purpose of acquiring the Shares; and (iii) whose prospective investment is directed by a person who has such knowledge 
+        and experience in financial and business matters that such family office is capable of evaluating the merits and risks of the prospective investment.
+      </label>
+      <br>
+      <label class="checkbox-block">
+        <input type="checkbox" name="entity_trust_5mm">
+        The entity is a “family client,” as defined in Rule 202(a)(11)(G)-1 under the Investment Advisors Act of 1940 (17 
+        CFR 275.202(a)(11)(G)-1), of a family office meeting the requirements of “family office” as described above and whose 
+        prospective investment in the Fund is directed by such family office as described above.
+      </label>
+
+    </fieldset>
+
+    <!-- Section 7 -->
+    <fieldset class="section" id="section7">
+
+      <legend>7. DISTRIBUTION INSTRUCTIONS</legend>
+      <p>Please read the following section carefully.</p>
+      <p><strong>You are automatically enrolled in the company’s distribution reinvestment plan 
+      (“drip”) unless you affirmatively elect not to participate in the drip below.</strong></p>
+      <label class="checkbox-block">
+        If you do not wish to be enrolled in the DRIP, Please check here. 
+        <input type="checkbox" name="drip_opt_out">
+      </label>
+      <p><strong>IMPORTANT:</strong> If you are not enrolled in the DRIP, please 
+      complete the Cash Distribution Information section below. Cash Distribution Information</p>
+      <p>(For Custodial held accounts, if you are not enrolled in the DRIP, the funds must be sent to the Custodian</p>
+
+      <!-- ACH -->
+      <h4>(A) ACH Authorization*</h4>
+
+      <label class="checkbox-block">
+        <input type="checkbox" name="dist_via_ach">
+        <strong>Please send distributions via ACH</strong> (Non-Custodial Investors Only)
+      </label>
+      <p>I/we hereby authorize the Fund or its agent to deposit my distributions into the bank account(s) listed below. I/we further 
+        authorize the financial institution(s) named below to credit such account(s). I/we understand that this authorization remains 
+        in effect until the Fund receives my/our notification, in writing, to terminate the authorization in such a time and manner as 
+        to afford the Fund and my/our financial institution(s) a reasonable time to act on it. In the event that the Fund deposits funds 
+        erroneously into my/our account, the Fund is authorized to debit such account for an amount not to exceed the amount of the erroneous deposit.</p>
+
+      <table class="bank-table">
+        <tr>
+          <td>Name Address of Financial Institution</td>
+          <td><input type="text" name="bank_name" class="full-width"></td>
+        </tr>
+        <tr>
+          <td>Account Type</td>
+          <td>
+            <label><input type="radio" name="bank_acct_type" value="checking"> Checking</label>
+            <label><input type="radio" name="bank_acct_type" value="savings"> Savings</label>
+          </td>
+        </tr>
+        <tr>
+          <td>Bank Routing Number</td>
+          <td><input type="text" name="bank_routing" class="full-width"></td>
+        </tr>
+        <tr>
+          <td>Bank Account Number</td>
+          <td><input type="text" name="bank_account" class="full-width"></td>
+        </tr>
+      </table>
+      <br>
+      <table class="sig-table">
+        <tr>
+          <td style="width:50%;">
+            <label class="label-block">Account Holder Signature
+              <input type="text" name="sig_individual" class="sig-field">
+            </label>
+          </td>
+          <td style="width:25%;">
+            <label class="label-block">Date
+              <input type="date" name="sig_individual_date" class="full-width">
+            </label>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label class="label-block">Joint Account Holder Signature
+              <input type="text" name="sig_joint" class="sig-field">
+            </label>
+          </td>
+          <td>
+            <label class="label-block">Date
+              <input type="date" name="sig_joint_date" class="full-width">
+            </label>
+          </td>
+        </tr>
+      </table>
+
+      <p>For the Fund to verify bank account and routing numbers, investors should provide a VOIDED CHECK for each investor 
+      account to be credited. Investors should retain completed copies of this form for their records.</p>
+      <p><strong>*If the financial institution holding your bank account does not accept direct deposit, 
+      Please complete the check authorization in part (b) below.</strong></p>
+
+      <!-- Check -->
+      <h4>(B) Check Authorization</h4>
+
+      <label class="checkbox-block">
+        <input type="checkbox" name="dist_via_check_self">
+        Please send checks to the address set forth in section 3 above (non-custodial investors only)
+      </label>
+
+      <label class="checkbox-block">
+        <input type="checkbox" name="dist_via_check_third">
+        Please send distributions via check to third party/custodian
+      </label>
+      <br>
+      <div class="grid-two">
+        <label class="label-block">Name
+          <input type="text" name="check_payee_name" class="full-width">
+        </label>
+        <label class="label-block">Account Number
+          <input type="text" name="check_payee_acct" class="full-width">
+        </label>
+      </div>
+
+      <label class="label-block">Institution (if applicable)
+        <input type="text" name="check_payee_institution" class="full-width">
+      </label>
+
+      <label class="label-block">Address
+        <input type="text" name="check_payee_address" class="full-width">
+      </label>
+
+      <div class="grid-three">
+        <label class="label-block">City
+          <input type="text" name="check_payee_city" class="full-width">
+        </label>
+        <label class="label-block">State
+          <input type="text" name="check_payee_state" class="full-width">
+        </label>
+        <label class="label-block">ZIP Code
+          <input type="text" name="check_payee_zip" class="full-width">
+        </label>
+      </div>
+
+    </fieldset>
+
+    <!-- Section 8 -->
+    <fieldset class="section" id="section8">
+
+      <legend>8. TRANSFER ON DEATH (TOD) DESIGNATION</legend>
+
+      <!-- Explanatory bullets -->
+      <ul class="reps">
+        <li>A Transfer on Death ("TOD") designation transfers ownership of Shares to the registered owner's designated 
+        beneficiary(ies) upon death; provided that the Fund receives proof of death and other documentation it deems 
+        necessary or appropriate, including in the case of a minor transferee, documentation of a custodian.</li>
+        <li>Until the death of the registered owner(s), the TOD beneficiary(ies) has (have) no present interest in, right to, or authority over, the TOD account.</li>
+        <li>A TOD designation will be accepted only where Shares are owned by a natural person and registered in that 
+        individual's name or by two or more natural persons as joint tenants with rights of survivorship.</li>
+        <li>Accounts registered to trusts, corporations, charities, and other such legal entities may not declare a TOD 
+        designation. These legal entities, however, may be listed as a beneficiary on a TOD for accounts registered to a natural person.</li>
+        <li>A TOD designation made by joint tenants with rights of survivorship does not take effect until the last of all multiple registered owners dies.</li>
+        <li>If the beneficiary(ies) does (do) not survive the registered owner(s), the Shares will be treated as belonging to the deceased registered owner's estate.</li>
+        <li>The TOD beneficiaries must be names on this form; “spouse” or “children” is NOT an acceptable designation. 
+        Minors may not be named as a beneficiary unless a custodian or guardian for such minor is also named.</li>
+        <li>A TOD designation may be voided at any time by the Fund in its sole discretion, if there is any doubt as to the 
+        validity or effectiveness of a TOD designation.</li>
+        <li>Upon the death of any of the joint tenants, the surviving registered owner(s) may revoke or change the TOD
+        designation at any time. A TOD direction is revocable prior to death of registered owner(s) by (a) the sale of the
+        registered owner's (or registered owners') Shares, (b) assigning Shares to another person or entity, (c) filing a 
+        revocation of TOD registration or filing a change in TOD registration with a new beneficiary (or beneficiaries). A 
+        TOD direction may not be revoked by a provision in a will or any other instrument.</li>
+        <li>The Fund will only honor a TOD direction that it has recorded in its registration records. TOD directions, changes 
+        and revocations will only be accepted when in proper form. Proper form requires: (a) endorsement by the registered 
+        owner(s); (b) instruction indicating either a new form of registration, removal of the current TOD beneficiaries 
+        and/or designation of a new TOD beneficiaries; and (c) actual receipt by the Fund prior to the registered owner's death.</li>
+        <li>This agreement is between the registered owner(s) and the Fund. You should discuss this TOD direction with your 
+        attorney to ensure that it is consistent with your estate and tax planning and is enforceable under the laws of your state.</li>
+      </ul>
+      <p>I (we) authorize the Fund to register all of my (our) Shares in beneficiary form, assigning ownership on my (our) death to 
+        my (our) beneficiary(ies). I understand that if more than one beneficiary is listed, percentages for each must be designated. 
+        If percentages are not designated, the Shares will be divided equally. Percentages must equal 100%. For additional 
+        beneficiaries, please complete and attach an additional form.</p>
+
+      <!-- Beneficiary table -->
+      <table class="beneficiary-table">
+        <thead>
+          <tr>
+            <th>Beneficiary Type</th>
+            <th>Name</th>
+            <th>Relationship to Registered Owner(s)</th>
+            <th>Birth Date</th>
+            <th>SSN / TIN</th>
+            <th>Percentage</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Primary</td>
+            <td><input type="text" name="ben1_name" class="full-width"></td>
+            <td><input type="text" name="ben1_rel" class="full-width"></td>
+            <td><input type="date" name="ben1_dob"></td>
+            <td><input type="text" name="ben1_ssn" class="full-width"></td>
+            <td><input type="text" name="ben1_pct" style="width:25%;"> %</td>
+          </tr>
+          <tr>
+            <td><input type="checkbox" name="second">Second or<br>
+                <input type="checkbox" name="contingent2">Contingent</td>
+            <td><input type="text" name="ben2_name" class="full-width"></td>
+            <td><input type="text" name="ben2_rel" class="full-width"></td>
+            <td><input type="date" name="ben2_dob"></td>
+            <td><input type="text" name="ben2_ssn" class="full-width"></td>
+            <td><input type="text" name="ben2_pct" style="width:25%;"> %</td>
+          </tr>
+          <tr>
+            <td><input type="checkbox" name="third">Third or<br>
+                <input type="checkbox" name="contingent3">Contingent</td>
+            <td><input type="text" name="ben3_name" class="full-width"></td>
+            <td><input type="text" name="ben3_rel" class="full-width"></td>
+            <td><input type="date" name="ben3_dob"></td>
+            <td><input type="text" name="ben3_ssn" class="full-width"></td>
+            <td><input type="text" name="ben3_pct" style="width:25%;"> %</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p><em>*If any beneficiary listed above is a minor, provide name of the guardian/custodian</em></p>
+
+      <!-- Beneficial-Owner Cert (Entity accounts) -->
+      <h4>Certification of Beneficial Owner(s) (Entity Only)</h4>
+      <p>The information contained in this section is sought pursuant to Section 1020.230 of 
+      Title 31 of the United States Code of Federal Regulations (31 CFR 1020.230).</p>
+      <p>The following information for each individual*, if any, who directly or indirectly, through any contract, arrangement, 
+      understanding, relationship, or otherwise, owns 25% or more of the equity interests of the legal entity listed above:</p>
+
+      <h4>1</h4>
+      <div class="grid-two">
+        <label class="label-block">Name (Last, First, MI)
+          <input type="text" name="bo_name1" class="full-width">
+        </label>
+        <label class="label-block">Date of Birth
+          <input type="date" name="bo_dob1" class="full-width">
+        </label>
+      </div>
+
+      <div class="grid-two">
+        <label class="label-block">Address (Residential or Business Street Address)
+          <input type="text" name="bo_addr1" class="full-width">
+        </label>
+        <label class="label-block">SSN (US) / Passport (foreign)
+          <input type="text" name="bo_ssn1" class="full-width">
+        </label>
+      </div>
+
+      <label class="label-block">% of Ownership
+        <input type="text" name="bo_pct1" class="percent-field">
+      </label>
+
+      <h4>2</h4>
+      <div class="grid-two">
+        <label class="label-block">Name (Last, First, MI)
+          <input type="text" name="bo_name1" class="full-width">
+        </label>
+        <label class="label-block">Date of Birth
+          <input type="date" name="bo_dob1" class="full-width">
+        </label>
+      </div>
+
+      <div class="grid-two">
+        <label class="label-block">Address (Residential or Business Street Address)
+          <input type="text" name="bo_addr1" class="full-width">
+        </label>
+        <label class="label-block">SSN (US) / Passport (foreign)
+          <input type="text" name="bo_ssn1" class="full-width">
+        </label>
+      </div>
+
+      <label class="label-block">% of Ownership
+        <input type="text" name="bo_pct1" class="percent-field">
+      </label>
+
+      <h4>3</h4>
+      <div class="grid-two">
+        <label class="label-block">Name (Last, First, MI)
+          <input type="text" name="bo_name1" class="full-width">
+        </label>
+        <label class="label-block">Date of Birth
+          <input type="date" name="bo_dob1" class="full-width">
+        </label>
+      </div>
+
+      <div class="grid-two">
+        <label class="label-block">Address (Residential or Business Street Address)
+          <input type="text" name="bo_addr1" class="full-width">
+        </label>
+        <label class="label-block">SSN (US) / Passport (foreign)
+          <input type="text" name="bo_ssn1" class="full-width">
+        </label>
+      </div>
+
+      <label class="label-block">% of Ownership
+        <input type="text" name="bo_pct1" class="percent-field">
+      </label>
+
+      <h4>4</h4>
+      <div class="grid-two">
+        <label class="label-block">Name (Last, First, MI)
+          <input type="text" name="bo_name1" class="full-width">
+        </label>
+        <label class="label-block">Date of Birth
+          <input type="date" name="bo_dob1" class="full-width">
+        </label>
+      </div>
+
+      <div class="grid-two">
+        <label class="label-block">Address (Residential or Business Street Address)
+          <input type="text" name="bo_addr1" class="full-width">
+        </label>
+        <label class="label-block">SSN (US) / Passport (foreign)
+          <input type="text" name="bo_ssn1" class="full-width">
+        </label>
+      </div>
+
+      <label class="label-block">% of Ownership
+        <input type="text" name="bo_pct1" class="percent-field">
+      </label>
+
+      <p>* If no individual meets this definition, please enter “Not Applicable” above and explain below (i.e. All <25%; Charity/Non-Profit; 
+        etc.). As applicable, explain any layers of Beneficial Ownership, etc. (For example, ABC Co. is 50% owned by 123 
+        Corp. 123 Corp. is 50% owned by John Doe; therefore, John is a 25% Beneficial Owner of ABC Co.): 
+        The following information for one individual with significant responsibility for managing the legal entity listed above, such as:</p>
+      <p>An executive officer or senior manager (e.g. Chief Executive Officer, Chief Financial Officer, Chief Operating Officer, 
+      Managing Member, General Partner, President, Vice President, Treasurer); or,</p>
+      <p>Any other individual who regularly performs similar functions. (If appropriate, an individual listed as a beneficial owner 
+      above may also be listed in this section).</p>
+
+      <div class="grid-two">
+        <label class="label-block">Name (Last, First, MI)
+          <input type="text" name="bo_name1" class="full-width">
+        </label>
+        <label class="label-block">Date of Birth
+          <input type="date" name="bo_dob1" class="full-width">
+        </label>
+      </div>
+
+      <label class="label-block">Address (Residential or Business Street Address)
+        <input type="text" name="bo_addr1" class="full-width">
+      </label>
+
+      <p>1: In lieu of a passport number, foreign persons may also provide an alien identification card number, or number and country 
+      of issuance of any other government-issued document evidencing nationality or residence and bearing a photograph or similar safeguard.</p>
+    
+    </fieldset>
+
+    <!-- Section 9 -->
+    <fieldset class="section" id="section9">
+
+      <legend>9. SUBSCRIBER’S REPRESENTATIONS AND AGREEMENTS</legend>
+      <p>I, the undersigned, hereby subscribes to purchase Shares in the amount set forth on the Signature Page of this Subscription 
+      Agreement and under the terms and conditions contained herein and in the Memorandum. Capitalized terms used but not 
+      defined herein shall have the meanings ascribed to them in the Memorandum.</p>
+      <p><strong>The undersigned hereby makes the following representations and warranties.</strong></p>
+
+      <ul class="reps">
+        <li>I have received read and fully understand the Memorandum.</li>
+        <li>I am basing my decision to invest only on the information in the Memorandum and information requested of the
+        Fund in writing by me, and I have not relied on any other representation made by any other person.</li>
+        <li>I am a citizen and/or a legal permanent resident of the United States of America, with my principal residence
+        maintained at the address set forth in this Subscription Agreement, and I am at least twenty-one years of age.</li>
+        <li>I am executing this Subscription Agreement: (A) on my own behalf, as a natural person, and I have the legal capacity
+        to execute, deliver and perform my obligations under this Subscription Agreement or (B) on behalf of a corporation,
+        partnership, limited liability company, trust or other entity, and (i) such entity is duly organized, validly existing
+        and in good standing under the laws of the jurisdiction where it was formed and is authorized by its governing
+        documents to execute, deliver and perform its obligations under this Subscription Agreement and to become a
+        Shareholder of the Fund, (ii) I have the full power and authority to execute and deliver this Subscription Agreement
+        on behalf such entity and (iii) this Subscription Agreement, and such entity’s execution hereof and performance of
+        its obligations hereunder, has been duly authorized by all requisite corporate or other action by the entity.</li>
+        <li>I am not, and, in the case of a corporation, partnership, limited liability company, trust or other entity, none of its
+        principal owners, partners, members, directors or officers are, included on the Office of Foreign Assets Control list
+        of foreign nations, organizations and individuals subject to economic and trade sanctions based on U.S. foreign
+        policy and national security goals, Executive Order 13224, which sets forth a list of individuals and groups with
+        whom U.S. persons are prohibited from doing business because such persons have been identified as terrorists or
+        persons who support terrorism, or any other watch list issued by any governmental authority, including the
+        Securities and Exchange Commission.</li>
+        <li>I consent and understand that by owning Shares I will be deemed to have consented, to disclosure by the Fund, the
+        Manager, the sponsor of the Fund, and their respective agents and affiliates to relevant third parties of information
+        pertaining to my “accredited investor” status and any other information requests related thereto or otherwise
+        appropriate to establish the Fund’s entitlement to a private offering exemption under the Securities Act. In addition,
+        I understand that the Fund and its respective agents and affiliates will disclose any and all information required or
+        requested by governmental or other authorities as required by or in connection with the U.S. Bank Secrecy Act, as
+        amended by the USA PATRIOT Act, and other antimony laundering, anti-terrorism and similar laws, rules and
+        regulations including, without limitation, Executive Order 13224.</li>
+        <li>The funds I am investing in the Fund are not derived from any criminal enterprise.</li>
+        <li>I agree that I will provide additional information or take such other actions as may be necessary or advisable for the
+        Fund for anti-money laundering purposes. The Fund may provide this information, or report the failure to comply
+        with such requests, to appropriate governmental authorities, in certain circumstances without notifying me that the
+        information has been provided. In the event of my delay or failure to produce any such requested information, the
+        Fund may refuse to accept my investment. The Fund reserves the right to require any payment or distribution to a
+        Shareholder to be paid into the account from which the Shareholder’s subscription funds originated.</li>
+        <li>I understand that an investment in the Fund involves substantial risk, and I am fully aware of and understand all of
+        the risk factors relating to the investment, including, but not limited to, the risks set forth in the “RISK FACTORS”
+        section of the Memorandum.</li>
+        <li>My overall commitment to investments that are not readily marketable is not disproportionate to my individual net
+        worth. My investment in the Fund will not cause my overall commitment to illiquid investments to become
+        excessive. I have adequate means of providing for my financial requirements, both current and anticipated, and
+        have no need for liquidity in this investment. I can bear and am willing to accept the economic risk of losing my
+        entire investment in the Fund.</li>
+        <li>I am purchasing the Shares for my own account and for investment purposes only, and not for the account of others.
+        I have no present intention, contract, agreement, undertaking or arrangement to assign, resell or subdivide the Shares.</li>
+        <li>I acknowledge that the Fund is relying upon the truth and accuracy of my representations, warranties, statements,
+        covenants, and agreements set forth herein in order to determine my suitability to invest in the Fund.</li>
+        <li>All information that I have provided in this Subscription Agreement is complete, accurate and correct as of its date
+        and may be relied on by the Fund in connection with my investment. I hereby agree to notify the Fund immediately
+        of any material change in any of that information occurring before the acceptance of this Subscription Agreement.</li>
+        <li>I have provided my correct Taxpayer Identification Number in the attached Form W-9, and I am not subject to back-
+        up withholding as a result of a failure to report all interest or dividends (or the Internal Revenue Service has notified
+        me that I am no longer subject to back-up withholding).</li>
+        <li>I have had the opportunity to ask questions of, and receive answers from, the Fund and the Manager, and their
+        respective principals, concerning the Fund, the Manager and their respective affiliates, the Shares and the terms and
+        conditions of the Offering, and to obtain any additional information deemed necessary to verify the accuracy of the
+        information contained in the Memorandum, to the extent possessed by the Fund or obtainable by it without
+        unreasonable effort or expense. I have been provided with all materials and information requested by either me or
+        others representing me, including any information requested to verify any information furnished to me.</li>
+        <li>I understand that, due to the restrictions described below, and the lack of any public market existing or likely to
+        exist in the future for the Shares, my investment in the Shares will be illiquid and that I will be required to bear the
+        financial risks of the investment for an indefinite period of time.</li>
+        <li>I understand that the Shares have not been registered under the Securities Act or any securities laws of any state or
+        other jurisdiction, and that the Shares are being offered and sold in reliance on specific exemptions from the
+        registration requirements of applicable federal and state securities laws. I understand that the sale, assignment,
+        transfer, or other disposition of the Shares is restricted under applicable federal and state securities laws and the
+        terms of the Charter. I understand that the Fund has no obligation and does not intend to register any of the Shares
+        for resale under any federal or state securities laws or to take any action under any such laws to make available an
+        exemption from registration requirements. I further agree that I will not sell, assign, transfer or otherwise dispose
+        of any Shares I purchase, in whole or in part, unless such sale, assignment, transfer or other disposition is (A)
+        registered under applicable federal and state securities law or sold in reliance upon an exemption from such
+        registration, and (B) otherwise permitted by and made in accordance with the terms of the Charter. I also understand
+        and acknowledge that, if the Shares are certificated, one or more legends will be placed on all certificates evidencing
+        the Shares with respect to restrictions on any sale, assignment, transfer, or other disposition of the Shares imposed
+        by applicable federal and state securities laws and the Charter.</li>
+        <li>I understand that no state or federal governmental authority has approved or disapproved of the Shares, reviewed
+        or passed on the accuracy or adequacy of the Memorandum or made any finding or determination relating to the
+        fairness of an investment in the Fund and that no state or federal governmental authority has recommended or
+        endorsed or will recommend or endorse the Shares.</li>
+        <li>If subject to the Employee Retirement Income Security Act of 1974 (“ERISA”), I am aware of, and have taken into
+        consideration, the diversification requirements of Section 404(a)(3) of ERISA in determining to invest in the Fund
+        and have concluded that such investment is prudent and not a non-eempt “prohibited transaction” within the
+        meaning of Section 40 of ERISA and Section 4975(c) of the Internal Revenue Code of 19 (the “Code”).</li>
+        <li>If acting on behalf of a charitable remainder trust, I am aware that if any portion of the income derived from the
+        trust’s ownership of Shares is deemed to be unrelated business taable income (“UBTI”), Section 4(c) of the
+        Code imposed on the trust an excise tax equal to the amount of such UBTI.</li>
+        <li>I understand and agree that I may not assign this offer or, except as specifically permitted by law, revoke my
+        subscription. I acknowledge that the Fund has the unconditional right to accept or reject this subscription, in whole or in part.</li>
+        <li>I understand that, if I am acquiring the Shares in a fiduciary capacity, the representations, warranties, statements,
+        covenants, and agreements set forth herein shall be deemed to have been made on behalf of the person or persons
+        for whose benefit I am acquiring such Shares. I have properly identified such person or persons in these subscription documents.</li>
+        <li>I understand that the Fund may provide the Memorandum, supplements to the Memorandum, reports, distribution
+        notices and other information, or documents, electronically unless I opt-out of electronic delivery by sending the
+        Fund instructions in writing that I would like to receive such documents in paper format. Unless I elect otherwise
+        and notify the Fund as provided herein, all documents will be provided in electronic form by email. I must have
+        internet access to use electronic delivery. While the Fund imposes no additional charge for this service, there may
+        be potential costs associated with electronic delivery, such as on-line charges. Documents will be available on a
+        password-protected web site: www.greenwoodstarinvestments.com</li>
+        <li>I may access and print all documents provided through this service. I may opt-out of electronic delivery at any time
+        and, following receipt of my notification, the Fund or its agent will begin sending me a paper copy of all required
+        documents. However, in order for the Fund to ensure timely delivery of documents to me, my notification must be
+        given to the Fund a reasonable time before electronic delivery has commenced. The Fund or its agent will provide
+        me with duplicate paper copies at any time upon request. Such request will not constitute notification of my decision
+        to opt-out of electronic delivery.</li>
+        <li>I understand, acknowledge and agree that if I am participating in the DRIP and I experience a material adverse
+        change in my financial condition or can no longer make the certifications, representations or warranties set forth in
+        Section 6 or this Section 9, I must promptly notify the Fund in writing, and the Fund and its affiliates may rely on
+        such notification to terminate my participation in the DRIP.</li>
+      </ul>
+
+      <p>The above representations are not a waiver of any rights that I may have under the acts administered by the Securities and 
+      Exchange Commission or by any state regulatory agency administering statutes bearing on the offer and sale of securities.</p>
+      <p>Indemnification Obligations of the Undersigned</p>
+      <p>I hereby agree to indemnify, defend and hold harmless the Fund, the Manager and their respective partners, members,
+        officers, directors, affiliates and advisors from any and all damages, losses, liabilities, costs and expenses (including
+        reasonable attorneys’ fees) (collectively “Losses”) that they may incur by reason of my failure to fulfill all of the terms and
+        conditions of this Subscription Agreement or by reason of the untruth or inaccuracy of any of the representations, warranties,
+        statements, covenants or agreements contained herein or in any other documents I have furnished to any of the foregoing in
+        connection with my subscription for Shares. This indemnification includes, but is not limited to, any Losses incurred by the
+        Fund, the Manager or any of their respective members, officers, directors, affiliates or advisors defending against any alleged
+        violation of federal or state securities laws which is based upon, or related to, any untruth or inaccuracy of any of the
+        representations, warranties, statements, covenants or agreements set forth herein or in any other documents I have furnished
+        to any of the foregoing in connection with my subscription for Shares. The foregoing indemnification obligations shall
+        survive until completion of liquidation of the Fund.</p>
+
+    </fieldset>
+
+    <!-- Section 10 -->
+    <fieldset class="section" id="section10">
+      <legend>10. INVESTOR SIGNATURE PAGE</legend>
+
+      <!-- Individuals / Joint Owners -->
+      <h4>Individual(s) and (or) Joint Owner(s):</h4>
+      <table class="sig-table">
+        <tr>
+          <td style="width:50%;">
+            <label class="label-block">Signature of Individual Investor
+              <input type="text" name="sig_individual" class="sig-field">
+            </label>
+          </td>
+          <td style="width:25%;">
+            <label class="label-block">Date
+              <input type="date" name="sig_individual_date" class="full-width">
+            </label>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label class="label-block">Signature of Joint Owner (if applicable)
+              <input type="text" name="sig_joint" class="sig-field">
+            </label>
+          </td>
+          <td>
+            <label class="label-block">Date
+              <input type="date" name="sig_joint_date" class="full-width">
+            </label>
+          </td>
+        </tr>
+      </table>
+
+      <!-- IRA / Qualified Plan -->
+      <h4>IRA, ROTH, or Qualified Pension Plan:</h4>
+      <table class="sig-table">
+        <tr>
+          <td style="width:50%;">
+            <label class="label-block">Signature of Participant
+              <input type="text" name="sig_ira_participant" class="sig-field">
+            </label>
+          </td>
+          <td>
+            <label class="label-block">Date
+              <input type="date" name="sig_ira_participant_date" class="full-width">
+            </label>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label class="label-block">Signature of Custodian (if required)
+              <input type="text" name="sig_ira_custodian" class="sig-field">
+            </label>
+          </td>
+          <td>
+            <label class="label-block">Date
+              <input type="date" name="sig_ira_custodian_date" class="full-width">
+            </label>
+          </td>
+        </tr>
+      </table>
+
+      <!-- Entity Investors -->
+      <h4>Entity Investors:</h4>
+      <label class="label-block">Name of Entity (i.e. Corporation, Partnership, LLC, or Trust)
+        <input type="text" name="entity_name_sig" class="full-width">
+      </label>
+
+      <div class="grid-two">
+        <label class="label-block">Name of Entity Representative
+          <input type="text" name="entity_rep_name" class="full-width">
+        </label>
+        <label class="label-block">Title of Entity Representative
+          <input type="text" name="entity_rep_title" class="full-width">
+        </label>
+      </div>
+
+      <table class="sig-table">
+        <tr>
+          <td style="width:50%;">
+            <label class="label-block">Signature of Entity Representative
+              <input type="text" name="sig_entity_rep" class="sig-field">
+            </label>
+          </td>
+          <td>
+            <label class="label-block">Date
+              <input type="date" name="sig_entity_rep_date" class="full-width">
+            </label>
+          </td>
+        </tr>
+      </table>
+    </fieldset>
+
+    <!-- Section 11 -->
+    <fieldset class="section" id="section11">
+      <legend>11. REGISTERED INVESTMENT ADVISORS*</legend>
+
+      <p>For purposes of the Subscription Agreement and the subscription of the person (the “Subscriber”) subscribing hereunder
+        (the “Subscription”), the registered investment advisor identified herein (“RIA”) represents and warrants to, and agrees
+        with, the Fund and the Manager as follows:</p>
+      <p>1. RIA acknowledges and agrees that no commissions, fees, or other compensation will be paid in respect of the Subscription
+        to the RIA by the Fund or any person acting on its behalf.</p>
+      <p>2. In its communications with Subscriber with respect to the Offering and in procuring the Subscription, RIA represents as
+        follows:
+        <br>a. RIA acknowledges the Offering is exempt from registration pursuant to Rule 506(c) of Regulation D under the
+        Securities Act. RIA hereby confirms that RIA has taken reasonable steps, as outlined in Rule 506(c)(2)(ii) of
+        Regulation D under the Securities Act (including, without limitation, (i) reviewing one or more of the types of
+        supporting financial documentation set forth in Rule 506(c)(2)(ii)(A) and (B) of the Securities Act, and (ii) obtaining
+        appropriate written representations from Subscriber) to verify that the Subscriber is an “accredited investor,” as
+        such term is defined by Rule 501(a) of Regulation D under the Securities Act, within the previous three months and
+        has determined based upon such reasonable steps that Subscriber is an accredited investor.
+        <br>b. The Subscriber resides in a jurisdiction that the Fund has identified as a jurisdiction in which the Shares are
+        qualified for sale or as to which such qualification is not required.
+        <br>c. RIA has determined that an investment in the Fund is appropriate for the Subscriber’s advisory account.
+        <br>d. If RIA is not exercising investment discretion with respect to the Subscription, RIA has advised the Subscriber
+        that the Subscriber would be afforded the opportunity to ask questions of, and receive answers from the Fund and
+        the Manager, and their respective principals, concerning the Fund, the Shares and the terms and conditions of the
+        Offering, and to obtain any additional information deemed necessary to verify the accuracy of the information
+        contained in the Memorandum to the extent possessed by the Fund or the Manager or obtainable by them without
+        unreasonable effort or expense.
+        <br>e. RIA has made reasonable inquiry to determine (i) that the Subscriber is acquiring the Shares for the Subscriber’s
+        own account and not on behalf of other persons, (ii) that the Subscriber understands the limitations on the
+        Subscriber’s disposition of the Shares under applicable federal and state securities laws and the Fund’s governing
+        documents, and (iii) that the Subscriber understands that he, she or it must bear the economic risk of the investment
+        for an indefinite period of time because of such limitations.
+        <br>f. RIA did not provide any information or make any representation concerning the Fund or the Offering except as
+        set forth in the Memorandum and any advertising and supplemental sales literature approved by the Manager to be
+        used in connection with the Offering.</p>
+      <p>3. RIA agrees to maintain, for at least six years, a record of the information obtained to determine that an investment in the
+        Shares is a suitable and appropriate investment for the Subscriber and that such Subscriber meets the financial qualification
+        and suitability standards and other requirements imposed on investors in the Offering, and to make such records available
+        to the Fund and the Manager during such period upon its reasonable request.</p>
+      <p>4. RIA agrees to keep records indicating to whom each Memorandum and related materials was delivered and to make such
+        information available to the Fund and the Manager upon written request.</p>
+      <p>5. RIA represents to the Fund and the Manager that RIA or firm by which RIA is employed (the “Firm”) has established
+        and implemented: (a) an anti-money laundering compliance program in accordance with applicable laws and regulations,
+        including without limitation federal and state securities laws, the USA Patriot Act of 2001, Executive Order 13224
+        Executive Order on Terrorist Financing Blocking Property and Prohibiting Transactions With Persons Who Commit,
+        Threaten to Commit, or Support Terrorism and industry practices for the investment advisor industry, and (b) a program, in
+        accordance with applicable laws and regulations, (i) for the verification of the identity of its new clients, (ii) for maintenance
+        of client records, (iii) to check the names of new clients against government watch lists, including the Office of Foreign
+        Asset Control’s list of Specially Designated Nationals and Blocked Persons, and (iv) for the provision of information to the
+        Financial Crimes Enforcement Network upon request.</p>
+      <p>6. With respect to any nonpublic personal information, as defined in the Gramm-Leach-Bliley Actof1999 (the “GLB Act”),
+        of Subscriber provided to RIA, RIA agrees to (a)abide by and comply with and to cause the Firm to abide by and comply
+        with (i) the applicable privacy standards and requirements of the GLB Act and the applicable regulations promulgated
+        thereunder, (ii) the privacy standards and requirements of any other applicable federal or state law, and the Firm’s
+        own internal privacy policies and procedures, each as may be amended from time to time; (b) refrain from the use or
+        disclosure of nonpublic personal information (as defined under the GLB Act) of Subscriber if Subscriber has opted out of
+        such disclosures, except as necessary to service the Subscriber or as otherwise necessary or required by applicable law; and
+        (c) provide Subscriber both initial and annual privacy notices as required pursuant to Rule 6(a) of Regulation S-P,
+        promulgated under the GLB Act.</p>
+      <p>7. RIA acknowledges that all expenses incurred by RIA in connection with this Subscription Agreement and the Offering,
+        including, but not limited to attorneys’ fees, will be RIA’s sole responsibility.</p>
+      <p>8. RIA represents that RIA, or the Firm, as applicable, is a duly and properly registered investment advisor in good standing
+        under the Investment Advisors Act of 1940, as amended, and as applicable under the securities laws of the states and the
+        jurisdictions where it is required to be registered to conduct its activities.</p>
+      <p>9. RIA agrees to indemnify, defend and hold harmless the Fund, the Manager, and their respective officers, directors,
+        affiliates, agents and representatives (collectively, the “Indemnified Parties”), from and against any losses, claims, damages,
+        expenses, or liabilities whatsoever, joint or several (“Losses”), to which any of the Indemnified Parties may become subject,
+        under the Securities Act or otherwise, insofar as such Losses arise out of or are based upon in whole or in part, any material
+        untruth or inaccuracy in, or breach of, any representation, warranty, covenant, agreement or statement made by RIA in this
+        Subscription Agreement.</p>
+      <p>The undersigned RIA further certifies that his/her signature below constitutes his/her agreement to be bound by all the
+        provisions of the terms and conditions set forth in this Section.</p>
+
+      <label class="label-block">Name of RIA Firm
+        <input type="text" name="ria_firm_name" class="full-width">
+      </label>
+
+      <label class="label-block">Name of RIA Representative
+        <input type="text" name="ria_rep_name" class="full-width">
+      </label>
+
+      <label class="label-block">Address
+        <input type="text" name="ria_address" class="full-width">
+      </label>
+
+      <div class="grid-three">
+        <label class="label-block">City
+          <input type="text" name="ria_city" class="full-width">
+        </label>
+        <label class="label-block">State
+          <input type="text" name="ria_state" class="full-width">
+        </label>
+        <label class="label-block">ZIP Code
+          <input type="text" name="ria_zip" class="full-width">
+        </label>
+      </div>
+
+      <div class="grid-two">
+        <label class="label-block">Email
+          <input type="email" name="ria_email" class="full-width">
+        </label>
+        <label class="label-block">Telephone
+          <input type="tel" name="ria_phone" class="full-width">
+        </label>
+      </div>
+
+      <table class="sig-table">
+        <tr>
+          <td style="width:50%;">
+            <label class="label-block">Signature of Registered Principal (if applicable)
+              <input type="text" name="sig_ria_principal" class="sig-field">
+            </label>
+          </td>
+          <td>
+            <label class="label-block">Date
+              <input type="date" name="sig_ria_principal_date" class="full-width">
+            </label>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label class="label-block">Signature of RIA Representative (if applicable)
+              <input type="text" name="sig_ria_rep" class="sig-field">
+            </label>
+          </td>
+          <td>
+            <label class="label-block">Date
+              <input type="date" name="sig_ria_rep_date" class="full-width">
+            </label>
+          </td>
+        </tr>
+      </table>
+    </fieldset>
+
+    <!-- Section 12 -->
+    <fieldset class="section" id="section12">
+      <legend>12. PAYMENT AND DELIVERY INSTRUCTIONS</legend>
+
+      <p>
+        Please deliver a completed and executed copy of this Subscription Agreement, along with a check for the
+        full purchase price payable to “GREENWOOD STAR INCOME AND GROWTH TRUST, INC.” (if
+        paying by check) or a wire payment for the full purchase price, to:
+      </p>
+
+      <!-- Check payment -->
+      <h4>CHECK</h4>
+      <table class="payment-table">
+        <tr><td>Payable to:</td><td>GREENWOOD STAR INCOME AND GROWTH TRUST, INC.</td></tr>
+        <tr><td>Mail to:</td><td>Great Lakes Fund Solutions as agent for Greenwood Star<br>
+          500 Park Ave Ste 114<br>Lake Villa, IL 60046</td></tr>
+      </table>
+
+      <!-- Electronic doc delivery note -->
+      <h4>ELECTRONIC DOCUMENT DELIVERY</h4>
+
+      <!-- Domestic wire / ACH -->
+      <h4>WIRE PAYMENT INSTRUCTIONS</h4>
+      <p>Please make all payments by wire to the account set forth below:
+      <br>Domestic Wires/ACH</p>
+      <table class="payment-table">
+        <tr><td>Receiving Financial Institution:</td><td>UMB Bank</td></tr>
+        <tr><td>ABA/Routing Number:</td><td>101000695</td></tr>
+        <tr><td>Bank Address:</td><td>UMB Bank<br>928 Grand Blvd<br>Kansas City, MO 64106</td></tr>
+        <tr><td>Beneficiary:</td><td>Great Lakes Fund Solutions (agent for Greenwood Star)</td></tr>
+        <tr><td>Beneficiary Address:</td><td>500 Park Ave Ste 114<br>Lake Villa, IL 60046</td></tr>
+        <tr><td>Beneficiary Account Number:</td><td>9872746988</td></tr>
+      </table>
+      <p>International Wires</p>
+      <table class="payment-table">
+        <tr><td>Receiving Financial Institution:</td><td>UMB Bank N.A.</td></tr>
+        <tr><td>Swift Code:</td><td>UMKCUS44</td></tr>
+        <tr><td>Bank Address:</td><td>1010 Grand Blvd<br>Kansas City, MO 64106</td></tr>
+        <tr><td>Beneficiary:</td><td>Great Lakes Fund Solutions (agent for Greenwood Star)</td></tr>
+        <tr><td>Beneficiary Address:</td><td>500 Park Ave Ste 114<br>Lake Villa, IL 60046</td></tr>
+        <tr><td>Beneficiary Account Number:</td><td>9872746988</td></tr>
+      </table>
+    </fieldset>
+
+    <button type="button" class="printBtn" onclick="window.print()">Print / Save as PDF</button>
+
+    </form>
+
+    </body>
+</html>
