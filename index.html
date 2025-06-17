@@ -96,11 +96,29 @@
               table,th,td{border-color:#415e6d;}
               /* --- hide on paper --- */
               .printBtn, button:not(.force-print){display:none !important;}
+              /* --- keep tables from splitting mid-row --- */
+              table { page-break-inside:auto; }
+              tr     { break-inside:avoid; page-break-inside:avoid; }
+              td     { break-inside:avoid; }
+              /* --- keep grid cells together --- */
+              .grid-two > *, .grid-three > * {
+                break-inside: avoid;
+                page-break-inside: avoid;
+              }
+              /* --- protect individual elements if they’re short --- */
+              p, h3, h4 { orphans:2; widows:2; }
+              td, th, input::after, textarea, select::after {
+                overflow-wrap:anywhere;
+                word-break:break-word;
+              }
             }
             /* ======================================================= */
         </style>
 
     </head>
+
+    <script>
+    </script>
 
     <body>
 
@@ -277,29 +295,36 @@
 
       <!-- Primary Owner -->
       <h3>Primary Owner</h3>
-      <div class="grid-two">
+      <div>
         <div>
-          <label class="label-block">Title
-            <select name="primary_title">
-              <option>Mr.</option><option>Mrs.</option><option>Ms.</option>
-              <option>M.D.</option><option>Ph.D.</option><option>D.D.S.</option>
-            </select>
-          </label>
-          <label class="label-block">Name
-            <input type="text" name="primary_name" class="full-width">
-          </label>
-          <label class="label-block">SSN / TIN
-            <input type="text" name="primary_ssn" class="full-width">
-          </label>
-          <label class="label-block">Date of Birth
-            <input type="date" name="primary_dob">
-          </label>
-          <label class="label-block">Primary Telephone
-            <input type="tel" name="primary_phone" class="full-width">
-          </label>
-          <label class="label-block">Secondary Telephone
-            <input type="tel" name="primary_phone2" class="full-width">
-          </label>
+          <div class="grid-two">
+            <label class="label-block">Name
+              <input type="text" name="primary_name" class="full-width">
+            </label>
+            <label class="label-block">Title
+              <select name="primary_title" class="full-width">
+                <option>Mr.</option><option>Mrs.</option><option>Ms.</option>
+                <option>M.D.</option><option>Ph.D.</option><option>D.D.S.</option>
+              </select>
+            </label>
+          </div>
+          <div class="grid-two">
+            <label class="label-block">SSN / TIN
+              <input type="text" name="primary_ssn" class="full-width">
+            </label>
+            <label class="label-block">Date of Birth
+              <input type="date" name="primary_dob" class="full-width">
+            </label>
+          </div>
+          <div class="grid-two">
+            <label class="label-block">Primary Telephone
+              <input type="tel" name="primary_phone" class="full-width">
+            </label>
+            <label class="label-block">Secondary Telephone
+              <input type="tel" name="primary_phone2" class="full-width">
+            </label>
+          </div>
+          
           <label class="label-block">Email
             <input type="email" name="primary_email" class="full-width">
           </label>
@@ -325,29 +350,35 @@
 
       <!-- Joint Owner -->
       <h3>Joint Owner</h3>
-      <div class="grid-two">
+      <div>
         <div>
-          <label class="label-block">Title
-            <select name="joint_title">
-              <option>Mr.</option><option>Mrs.</option><option>Ms.</option>
-              <option>M.D.</option><option>Ph.D.</option><option>D.D.S.</option>
-            </select>
-          </label>
-          <label class="label-block">Name
-            <input type="text" name="joint_name" class="full-width">
-          </label>
-          <label class="label-block">SSN / TIN
-            <input type="text" name="joint_ssn" class="full-width">
-          </label>
-          <label class="label-block">Date of Birth
-            <input type="date" name="joint_dob">
-          </label>
-          <label class="label-block">Primary Telephone
-            <input type="tel" name="joint_phone" class="full-width">
-          </label>
-          <label class="label-block">Secondary Telephone
-            <input type="tel" name="joint_phone2" class="full-width">
-          </label>
+          <div class="grid-two">
+            <label class="label-block">Name
+              <input type="text" name="joint_name" class="full-width">
+            </label>
+            <label class="label-block">Title
+              <select name="joint_title" class="full-width">
+                <option>Mr.</option><option>Mrs.</option><option>Ms.</option>
+                <option>M.D.</option><option>Ph.D.</option><option>D.D.S.</option>
+              </select>
+            </label>
+          </div>
+          <div class="grid-two">
+            <label class="label-block">SSN / TIN
+              <input type="text" name="joint_ssn" class="full-width">
+            </label>
+            <label class="label-block">Date of Birth
+              <input type="date" name="joint_dob" class="full-width">
+            </label>
+          </div>
+          <div class="grid-two">
+            <label class="label-block">Primary Telephone
+              <input type="tel" name="joint_phone" class="full-width">
+            </label>
+            <label class="label-block">Secondary Telephone
+              <input type="tel" name="joint_phone2" class="full-width">
+            </label>
+          </div>
           <label class="label-block">Email
             <input type="email" name="joint_email" class="full-width">
           </label>
@@ -879,88 +910,80 @@
           <input type="date" name="bo_dob1" class="full-width">
         </label>
       </div>
-
+      <label class="label-block">Address (Residential or Business Street Address)
+        <input type="text" name="bo_addr1" class="full-width">
+      </label>
       <div class="grid-two">
-        <label class="label-block">Address (Residential or Business Street Address)
-          <input type="text" name="bo_addr1" class="full-width">
-        </label>
         <label class="label-block">SSN (US) / Passport (foreign)
           <input type="text" name="bo_ssn1" class="full-width">
         </label>
+        <label class="label-block">% of Ownership
+          <input type="text" name="bo_pct1" class="full-width">
+        </label>
       </div>
-
-      <label class="label-block">% of Ownership
-        <input type="text" name="bo_pct1" class="percent-field">
-      </label>
 
       <h4>2</h4>
       <div class="grid-two">
         <label class="label-block">Name (Last, First, MI)
-          <input type="text" name="bo_name1" class="full-width">
+          <input type="text" name="bo_name2" class="full-width">
         </label>
         <label class="label-block">Date of Birth
-          <input type="date" name="bo_dob1" class="full-width">
+          <input type="date" name="bo_dob2" class="full-width">
         </label>
       </div>
-
-      <div class="grid-two">
-        <label class="label-block">Address (Residential or Business Street Address)
-          <input type="text" name="bo_addr1" class="full-width">
-        </label>
-        <label class="label-block">SSN (US) / Passport (foreign)
-          <input type="text" name="bo_ssn1" class="full-width">
-        </label>
-      </div>
-
-      <label class="label-block">% of Ownership
-        <input type="text" name="bo_pct1" class="percent-field">
+      <label class="label-block">Address (Residential or Business Street Address)
+        <input type="text" name="bo_addr2" class="full-width">
       </label>
+      <div class="grid-two">
+        <label class="label-block">SSN (US) / Passport (foreign)
+          <input type="text" name="bo_ssn2" class="full-width">
+        </label>
+        <label class="label-block">% of Ownership
+          <input type="text" name="bo_pct2" class="full-width">
+        </label>
+      </div>
 
       <h4>3</h4>
       <div class="grid-two">
         <label class="label-block">Name (Last, First, MI)
-          <input type="text" name="bo_name1" class="full-width">
+          <input type="text" name="bo_name3" class="full-width">
         </label>
         <label class="label-block">Date of Birth
-          <input type="date" name="bo_dob1" class="full-width">
+          <input type="date" name="bo_dob3" class="full-width">
         </label>
       </div>
-
-      <div class="grid-two">
-        <label class="label-block">Address (Residential or Business Street Address)
-          <input type="text" name="bo_addr1" class="full-width">
-        </label>
-        <label class="label-block">SSN (US) / Passport (foreign)
-          <input type="text" name="bo_ssn1" class="full-width">
-        </label>
-      </div>
-
-      <label class="label-block">% of Ownership
-        <input type="text" name="bo_pct1" class="percent-field">
+      <label class="label-block">Address (Residential or Business Street Address)
+        <input type="text" name="bo_addr3" class="full-width">
       </label>
+      <div class="grid-two">
+        <label class="label-block">SSN (US) / Passport (foreign)
+          <input type="text" name="bo_ssn3" class="full-width">
+        </label>
+        <label class="label-block">% of Ownership
+          <input type="text" name="bo_pct3" class="full-width">
+        </label>
+      </div>
 
       <h4>4</h4>
       <div class="grid-two">
         <label class="label-block">Name (Last, First, MI)
-          <input type="text" name="bo_name1" class="full-width">
+          <input type="text" name="bo_name4" class="full-width">
         </label>
         <label class="label-block">Date of Birth
-          <input type="date" name="bo_dob1" class="full-width">
+          <input type="date" name="bo_dob4" class="full-width">
         </label>
       </div>
-
-      <div class="grid-two">
-        <label class="label-block">Address (Residential or Business Street Address)
-          <input type="text" name="bo_addr1" class="full-width">
-        </label>
-        <label class="label-block">SSN (US) / Passport (foreign)
-          <input type="text" name="bo_ssn1" class="full-width">
-        </label>
-      </div>
-
-      <label class="label-block">% of Ownership
-        <input type="text" name="bo_pct1" class="percent-field">
+      <label class="label-block">Address (Residential or Business Street Address)
+        <input type="text" name="bo_addr4" class="full-width">
       </label>
+      <div class="grid-two">
+        <label class="label-block">SSN (US) / Passport (foreign)
+          <input type="text" name="bo_ssn4" class="full-width">
+        </label>
+        <label class="label-block">% of Ownership
+          <input type="text" name="bo_pct4" class="full-width">
+        </label>
+      </div>
 
       <p>* If no individual meets this definition, please enter “Not Applicable” above and explain below (i.e. All <25%; Charity/Non-Profit; 
         etc.). As applicable, explain any layers of Beneficial Ownership, etc. (For example, ABC Co. is 50% owned by 123 
