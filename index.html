@@ -7,112 +7,190 @@
         <title>GS Subscription Document</title>
 
         <style>
-            /* -------- Intro (cover) section -------- */
-            .banner-img{width:100%;max-width:100%;height:auto;margin-bottom:24px;}
-            .intro-title{font-size:1.4em;font-weight:bold;margin:4px 0;}
-            .intro-sub{font-size:1.15em;margin:2px 0 16px 0;}
-            ul.intro-list{margin-left:20px;}
-            /* -------- Sections 1 – 2 -------- */
-            body{font-family:Arial,Helvetica,sans-serif;margin:40px;color:#000;}
-            h1,h2{margin-bottom:4px;}
-            .section{border:1px solid #000;padding:16px;margin-bottom:24px;}
-            .section legend{font-weight:bold;}
-            label{display:inline-block;margin-right:12px;margin-bottom:6px;}
-            table{border-collapse:collapse;width:100%;}
-            th,td{border:1px solid #000;padding:6px;vertical-align:top;}
-            .subnote{font-size:0.9em;color:#333;}
-            /* -------- Section 3 (Investor Info) -------- */
-            .grid-two{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
-            .label-block{display:block;margin-bottom:6px;}
-            .full-width{width:100%;}
-            .note{font-size:.9em;font-style:italic;color:#333;margin-top:8px;}
-            /* -------- Sections 4 – 5 -------- */
-            .checkbox-block{display:block;margin-bottom:6px;}
-            .grid-three{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;}
-            /* -------- Section 6 -------- */
-            .subheader{font-weight:bold;margin-top:16px;}
-            /* -------- Section 7 -------- */
-            .bank-table{border-collapse:collapse;width:100%;}
-            .bank-table td{border:1px solid #000;padding:6px;}
-            /* -------- Section 8 -------- */
-            .beneficiary-table{border-collapse:collapse;width:100%;}
-            .beneficiary-table th,.beneficiary-table td{border:1px solid #000;padding:6px;text-align:left;}
-            .percent-field{width:80px;}
-            /* -------- Section 9 -------- */
-            ul.reps{margin-left:20px;}  /* simple indent for bullet list */
-            /* -------- Section 10 -------- */
-            .sig-table{width:100%;margin-bottom:12px;}
-            .sig-table td{padding:6px 4px;vertical-align:bottom;}
-            .sig-field{width:100%;border:none;border-bottom:1px solid #000;}
-            /* -------- Section 12 -------- */
-            .payment-table{border-collapse:collapse;width:100%;}
-            .payment-table td{padding:4px 6px;vertical-align:top;border:none;}
-            .payment-table td:first-child{font-weight:bold;width:190px;}
-            /* ===================== PRINT LAYER ===================== */
-            @media print {
-              /* --- page box --- */
-              @page {
-                size: A4 portrait;
-                margin: 12mm 15mm;
-                counter-increment: page;
-              }
-              /* --- global tweaks --- */
-              body{
-                font-family:'Proxima Nova','Arial',sans-serif;
-                -webkit-print-color-adjust:exact;
-                        print-color-adjust:exact;
-              }
-              /* --- fixed header / footer drawn once per page --- */
-              .print-banner{
-                position:fixed; top:0; left:0; right:0;
-                height:60px;
-                background:#11715f url('header-placeholder.png') center/contain no-repeat;
-              }
-              .print-footer{
-                position:fixed; bottom:0; left:0; right:0;
-                height:22px;
-                text-align:center;
-                font-size:0.75rem;
-                line-height:22px;
-                color:#415e6d;
-              }
-              .print-footer:after{
-                content:"Greenwood Star Income & Growth Trust — Subscription Agreement  |  Page " counter(page);
-              }
-              /* --- section blocks --- */
-              fieldset.section{
-                border:1px solid #004b28;
-                padding:14px; margin-bottom:18px;
-                break-inside:avoid; page-break-inside:avoid;
-              }
-              fieldset.section legend{
-                color:#004b28;
-                font-weight:600;
-                font-size:1.05rem;
-              }
-              /* --- headings --- */
-              h1,h2{color:#11715f;font-family:'Neulis Sans','Arial',sans-serif;}
-              /* --- tables & lines --- */
-              table,th,td{border-color:#415e6d;}
-              /* --- hide on paper --- */
-              .printBtn, button:not(.force-print){display:none !important;}
-              /* --- keep tables from splitting mid-row --- */
-              table { page-break-inside:auto; }
-              tr     { break-inside:avoid; page-break-inside:avoid; }
-              td     { break-inside:avoid; }
-              /* --- keep grid cells together --- */
-              .grid-two > *, .grid-three > * {
-                break-inside: avoid;
-                page-break-inside: avoid;
-              }
-              /* --- protect individual elements if they’re short --- */
-              p, h3, h4 { orphans:2; widows:2; }
-              td, th, input::after, textarea, select::after {
-                overflow-wrap:anywhere;
-                word-break:break-word;
-              }
+            /* =========  Greenwood Star 2025 – Brand-aligned stylesheet  ========= */
+            /* ---- 1. Brand design tokens ---- */
+            :root{
+              /* Primary palette (style guide) */          /*  [oai_citation:0‡style.pdf](file-service://file-CgjV11F3VTXaeF4xaoibXM) */
+              --gs-green:       #11715f;
+              --gs-navy:        #415e6d;
+              --gs-dark-green:  #004b28;
+              --gs-mid-green:   #30b566;
+              --gs-light:       #e1e6da;
+              /* Accent */
+              --gs-accent:      #83a29d;
+              --gs-accent-2:    #7ea8ab;
+
+              --radius:         6px;
+              --shadow-sm:      0 1px 3px rgba(0,0,0,.08);
+              --shadow-md:      0 2px 6px rgba(0,0,0,.08);
             }
-            /* ======================================================= */
+
+            /* ---- 2. Base typography & page ---- */
+            @media screen{
+              /* If self-hosted webfonts aren’t available the stack still respects guide order */
+              body{
+                font-family:'Proxima Nova', Arial, sans-serif;
+                font-size:16px; line-height:1.55;
+                color:#0e2d25;
+                background:#fafdfb;
+                margin:40px;
+              }
+              h1,h2,h3,h4{
+                font-family:'Neulis Sans', Arial, sans-serif;
+                color:var(--gs-green);
+                margin:0 0 8px 0;
+                line-height:1.25;
+              }
+              h1{font-size:1.6rem;}
+              h2{font-size:1.35rem;font-weight:600;}
+              h3{font-size:1.15rem;font-weight:600;color:var(--gs-navy);}
+              h4{font-size:1rem;font-weight:600;color:var(--gs-navy);}
+            }
+
+            /* ---- 3. Forms & inputs ---- */
+            input,select,textarea{
+              font-family:inherit; font-size:.95rem;
+              padding:6px 8px; border:1px solid var(--gs-accent);
+              border-radius:var(--radius); background:#fff;
+              transition:border-color .2s, box-shadow .2s;
+            }
+            input:focus,select:focus,textarea:focus{
+              outline:none; border-color:var(--gs-mid-green);
+              box-shadow:0 0 0 2px rgba(48,181,102,.25);
+            }
+            label{font-weight:500; color:var(--gs-navy); margin-right:12px; margin-bottom:6px; display:inline-block;}
+            .label-block{display:block;margin-bottom:10px;}
+            .full-width{width:100%;}
+
+            /* radio / checkbox spacing */
+            .checkbox-block{display:block;margin-bottom:8px;}
+            .checkbox-block input, label input[type="radio"]{margin-right:4px;}
+
+            /* ---- 4. Sections ---- */
+            fieldset.section{
+              border:1px solid var(--gs-light);
+              border-left:4px solid var(--gs-green);
+              border-radius:var(--radius);
+              padding:24px;
+              margin-bottom:32px;
+              box-shadow:var(--shadow-sm);
+              background:#ffffff;
+            }
+            fieldset.section legend{
+              background:var(--gs-green);
+              color:#fff;
+              padding:6px 14px;
+              border-radius:var(--radius);
+              font-family:'Neulis Sans', Arial, sans-serif;
+              font-size:1.05rem;
+              font-weight:600;
+            }
+
+            /* ---- 5. Grids ---- */
+            .grid-two{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+            .grid-three{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
+
+            /* ---- 6. Tables ---- */
+            table{border-collapse:collapse;width:100%;margin-top:8px;}
+            th{
+              background:var(--gs-green);
+              color:#fff;
+              padding:10px 8px;
+              text-align:left;
+              font-weight:600;
+            }
+            td{padding:8px 6px;border:1px solid var(--gs-light);}
+            tbody tr:nth-child(even){background:#f5faf6;}
+            /* Signature rows need no borders */
+            .sig-table td{border:none;padding:6px 4px;vertical-align:bottom;}
+            .sig-field{width:100%;border:none;border-bottom:1px solid var(--gs-navy);background:transparent;}
+
+            /* ---- 7. Buttons ---- */
+            .printBtn{
+              background:var(--gs-green);
+              color:#fff;
+              font-family:'Proxima Nova', Arial, sans-serif;
+              font-weight:600;
+              font-size:1.05rem;
+              padding:12px 28px;
+              border:none;border-radius:var(--radius);
+              cursor:pointer;
+              transition:background .25s, transform .2s;
+              box-shadow:var(--shadow-md);
+            }
+            .printBtn:hover{background:var(--gs-mid-green);transform:translateY(-2px);}
+            .printBtn:active{transform:translateY(0);}
+
+            /* ---- 8. Misc helpers ---- */
+            .banner-img{width:100%;height:auto;margin-bottom:28px;border-radius:var(--radius);box-shadow:var(--shadow-sm);}
+            .note,.subnote{font-size:.9rem;color:#4d5958;margin-top:10px;}
+            ul.reps{margin-left:18px;}
+
+            /* ---- 9. Media: print overrides keep earlier logic, just tweak colours ---- */
+            @media print{
+              body{background:#fff;color:#000;font-family:'Proxima Nova', Arial, sans-serif;}
+              h1,h2{color:var(--gs-green);}
+              table,th,td{border-color:var(--gs-navy);}
+              fieldset.section{box-shadow:none;border:1px solid var(--gs-dark-green);}
+              legend{background:var(--gs-dark-green);}
+              .printBtn, button:not(.force-print){display:none!important;}
+              /* === CLEANER FORM CONTROLS ON PAPER === */
+
+              /* 1.  Select menus → look like plain text fields */
+              select{
+                background:#fff !important;          /* no gray ▾ background */
+                color:#000 !important;
+                border:1pt solid #000 !important;
+                padding:3pt 4pt;
+                -webkit-appearance:none;
+                   -moz-appearance:none;
+                        appearance:none;             /* hide arrow in print */
+                width:100%;
+                max-width:100%;
+              }
+
+              /* 2.  Check-boxes & radios → bigger, crisp outline + visible checkmark */
+              input[type="checkbox"],
+              input[type="radio"]{
+                -webkit-appearance:none;
+                   -moz-appearance:none;
+                        appearance:none;
+                width:12pt; height:12pt;
+                border:1pt solid #000;
+                margin-right:4pt;
+                position:relative;
+              }
+              input[type="checkbox"]:checked::after{
+                content:"✓";
+                font-size:10pt;
+                line-height:12pt;
+                position:absolute;
+                top:0; left:0;
+                width:100%; text-align:center;
+              }
+              input[type="radio"]{border-radius:50%;}
+              input[type="radio"]:checked::after{
+                content:"●";
+                font-size:8pt;
+                position:absolute;
+                top:0; left:0;
+                width:100%; text-align:center;
+              }
+
+              /* 3.  Keep fields from splitting awkwardly at page breaks */
+              select,
+              input[type="checkbox"],
+              input[type="radio"]{break-inside:avoid;}
+            }
+
+            /* --- Keep form fields from bursting out of table cells --- */
+            table td > input[type="text"],
+            table td > select,
+            table td > textarea{
+              width:100%;          /* fill only the cell, never bigger */
+              max-width:100%;      /* extra belt-and-suspenders */
+              box-sizing:border-box;/* include padding/border in that 100% */
+            }
         </style>
 
     </head>
@@ -126,7 +204,7 @@
     <section id="intro">
 
       <!-- Colored banner graphic -->
-      <img src="Greenwood-Star-Logo-RGB.png" alt="Greenwood Star cover banner" class="banner-img">
+      <img src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXdzioAat_g9JqkvO42ic-waEsuNNEm4NQ0oCdk2n7J4jiI5IhgOrsQncGhuNUYqxO93m01rxl1HoYC9lojHe_oD5EiAanJVyR7YIaLLDGd6eb41fEncmkRfZgfakoTbtGsKi_3yDA?key=qisq4ypirIAY8_OY2kyMdw" alt="Greenwood Star cover banner" class="banner-img">
 
       <p class="intro-title">FORM OF SUBSCRIPTION AGREEMENT</p>
       <p class="intro-title">GREENWOOD STAR INCOME AND GROWTH TRUST, INC.</p>
@@ -716,8 +794,14 @@
 
       <table class="bank-table">
         <tr>
-          <td>Name Address of Financial Institution</td>
+          <td>Name of Financial Institution</td>
           <td><input type="text" name="bank_name" class="full-width"></td>
+        </tr>
+        <tr>
+          <td colspan="2">
+              Address
+              <input type="text" name="bank_address" class="full-width"></textarea>
+          </td>
         </tr>
         <tr>
           <td>Account Type</td>
